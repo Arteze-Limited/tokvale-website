@@ -1813,3 +1813,13 @@ body { margin: 0px; font-family: var(--font-body); -webkit-font-smoothing: antia
   .tk-sec-cards { grid-template-columns: repeat(4, 1fr); }
 }
 .tk-sec-card h3 { margin-top: 28px !important; padding-top: 0 !important; font-size: 1.375rem; }
+
+/* Navigation: solid backdrop once the page scrolls, so it reads over light sections */
+.tk-nav-pill { transition: background-color .3s ease, border-color .3s ease, box-shadow .3s ease; }
+.tk-scrolled .tk-nav-pill {
+  background-color: rgb(var(--rgb-ink) / 0.86) !important;
+  border-color: rgb(255 255 255 / 0.12) !important;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 30px -12px rgb(0 0 0 / 0.45);
+}
